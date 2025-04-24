@@ -22,7 +22,20 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
     </head>
-
+    <style>
+        @media (min-width: 576px) {
+            .titulo {
+                font-size:  30px;
+                color:#ffffff;
+            }           
+        }   
+        @media (max-width: 576px) {            
+            .titulo {
+                font-size:  19px;
+                color:#ffffff;
+            }
+        }  
+    </style>
     <body>
         <!-- Top Bar Start -->
         <div class="top-bar d-none d-md-block">
@@ -60,7 +73,7 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">AHORRO ROTATIVO MUTUAL</a>
+                <a href="index.html" class="titulo text-white">AHORRO ROTATIVO MUTUAL</a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -76,8 +89,9 @@
                         <a href="Contacto.html" class="nav-item nav-link">Contacto</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Usuarios</a>
-                            <div class="dropdown-menu">
-                                <a href="blog.html" class="dropdown-item">Iniciar Sesión</a>                                
+                            <div class="dropdown-menu">                                
+                                <a href="Iniciar_Sesion.php" class="nav-link text-dark"><i class="fa fa-user-circle" aria-hidden="true" style="font-size: 20px;"></i> <b>Iniciar Sesión</b></a>         
+                                <a href="Cerrar_Sesion.php" class="nav-link dropdown-item text-dark"><i class="fa fa-user-times" aria-hidden="true" style="font-size: 20px;"></i><b> Cerrar Sesión</b></a>                        
                             </div>
                         </div>
                     </div>
@@ -210,12 +224,12 @@
                     </div>
                     <div class="col-md-6">
                         <div class="section-header">
-                            <p>Sobre Nosotros</p>
-                            <h2>12 Años de Experiencia</h2>
+                            <p class="d-none">Sobre Nosotros</p>
+                            <h2>Sobre Nosotros</h2>
                         </div>
                         <div class="about-text" style="text-align: justify;">
                             <p>
-                                Somos una asociación mutual sin ánimo de lucro, conformada por personas comprometidas con el bienestar colectivo y la solidaridad financiera. Nuestro propósito es ofrecer a nuestros asociados una alternativa segura, confiable y justa para acceder a recursos económicos mediante el ahorro rotativo mensual.
+                                Somos una asociación mutual sin ánimo de lucro, conformada por personas comprometidas con el bienestar colectivo y la solidaridad financiera. Nuestro propósito es ofrecer a nuestros asociados una alternativa segura, confiable y justa para acceder a recursos económicos mediante el ahorro rotativo mutual.
 
                             </p>
                             <p>
@@ -224,7 +238,7 @@
                             <p>
                                 Nacemos como una solución comunitaria a los desafíos del acceso a crédito y ahorro, respaldados por una plataforma tecnológica que garantiza trazabilidad, transparencia y comodidad para todos nuestros miembros.
                             </p>
-                            <a class="btn" href="">Learn More</a>
+                            <a class="btn" href="Nosotros.html">Ver Más</a>
                         </div>
                     </div>
                 </div>
@@ -393,7 +407,7 @@
                     </div>
                     <div class="testimonial-item">
                         <img src="img/testimonial-2.jpg" alt="Image">
-                        <p>
+                        <p style="text-align: justify;">
                             "Nunca había tenido una experiencia tan clara y solidaria con el ahorro. La plataforma digital me permite seguir mis aportes y turnos fácilmente. Me siento parte de una comunidad, no solo un usuario más."
                         </p>
                         <h2>Andres Mejía</h2>
@@ -401,7 +415,7 @@
                     </div>
                     <div class="testimonial-item">
                         <img src="img/testimonial-3.jpg" alt="Image">
-                        <p>
+                        <p style="text-align: justify;">
                             "Participar en este Ahorro Rotativo ha sido una bendición. Además del beneficio económico, los talleres de educación financiera me ayudaron a organizar mejor mis finanzas personales. Hoy ahorro con propósito y sin estrés."
                         </p>
                         <h2>Santiago García</h2>
@@ -409,7 +423,7 @@
                     </div>
                     <div class="testimonial-item">
                         <img src="img/testimonial-4.jpg" alt="Image">
-                        <p>
+                        <p style="text-align: justify;">
                             "Lo que más valoro es la atención personalizada. Siempre hay alguien dispuesto a orientarte y resolver tus dudas. Esta es una alternativa justa y confiable para quienes queremos ahorrar de manera solidaria."
                         </p>
                         <h2>Luis Fernando Torres</h2>
@@ -545,19 +559,19 @@
                             <div id="success"></div>
                             <form name="sentMessage" id="contactForm" novalidate="novalidate">
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="name" placeholder="Nombre" required="required" data-validation-required-message="Please enter your name" />
+                                    <input type="text" class="form-control" id="name" placeholder="Nombre" required="required" data-validation-required-message="Por Favor Escribe tu Nombre" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="email" class="form-control" id="email" placeholder="Correo" required="required" data-validation-required-message="Please enter your email" />
+                                    <input type="email" class="form-control" id="email" placeholder="Correo" required="required" data-validation-required-message="Por Favor Escribe tu Correo" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="subject" placeholder="Asunto" required="required" data-validation-required-message="Please enter a subject" />
+                                    <input type="text" class="form-control" id="subject" placeholder="Asunto" required="required" data-validation-required-message="Por Favor Escribe el Asunto" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <textarea class="form-control" id="message" placeholder="Mensaje" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                    <textarea class="form-control" id="message" placeholder="Mensaje" required="required" data-validation-required-message="Por Favor escribe Tu Mensaje"></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div>

@@ -22,7 +22,26 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
     </head>
-
+    <style>
+        @media (min-width: 576px) {
+            .titulo {
+                font-size:  30px;
+                color:#ffffff;
+            }
+            .nosotros{
+                margin-top: 100px;
+            }
+        }   
+        @media (max-width: 576px) {    
+            .titulo {
+                font-size:  19px;
+                color:#ffffff;
+            }        
+            .nosotros{
+                margin-top: 0px;
+            }
+        } 
+    </style>
     <body>
         <!-- Top Bar Start -->
         <div class="top-bar d-none d-md-block">
@@ -60,7 +79,7 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">AHORRO ROTATIVO MUTUAL</a>
+                <a href="index.html" class="titulo text-white" class="navbar-brand">AHORRO ROTATIVO MUTUAL</a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -77,7 +96,8 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Usuarios</a>
                             <div class="dropdown-menu">
-                                <a href="blog.html" class="dropdown-item">Iniciar Sesión</a>                                
+                                <a href="Iniciar_Sesion.php" class="nav-link text-dark"><i class="fa fa-user-circle" aria-hidden="true" style="font-size: 20px;"></i> <b>Iniciar Sesión</b></a>         
+                                <a href="Cerrar_Sesion.php" class="nav-link dropdown-item text-dark"><i class="fa fa-user-times" aria-hidden="true" style="font-size: 20px;"></i><b> Cerrar Sesión</b></a>                               
                             </div>
                         </div>
                     </div>
@@ -87,7 +107,7 @@
         <!-- Nav Bar End -->     
 
         <!-- About Start -->
-        <div class="about" style="margin-top: 70px;">
+        <div class="about nosotros">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6">
@@ -116,7 +136,7 @@
                             <p>
                                 Nacemos como una solución comunitaria a los desafíos del acceso a crédito y ahorro, respaldados por una plataforma tecnológica que garantiza trazabilidad, transparencia y comodidad para todos nuestros miembros.
                             </p>
-                            <a class="btn" href="">Learn More</a>
+                            <a class="btn d-none" href="">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -126,7 +146,7 @@
 
         <!-- Team Start -->
         <div class="team">
-            <div class="container">
+            <div class="container nosotros">
                 <div class="section-header">
                     <p>Conozca a Nuestros Asesores</p>
                     <h2>Nuestro Equipo de Consultoría Profesional</h2>

@@ -22,7 +22,23 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
     </head>
-
+    <style>
+        @media (min-width: 576px) {
+            .titulo {
+                font-size:  30px;
+                color:#ffffff;
+            }    
+            .contacto{
+                margin-top: 100px;
+            }       
+        }   
+        @media (max-width: 576px) {            
+            .titulo {
+                font-size:  19px;
+                color:#ffffff;
+            }
+        }  
+    </style>
     <body>
         <!-- Top Bar Start -->
         <div class="top-bar d-none d-md-block">
@@ -60,7 +76,7 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">AHORRO ROTATIVO MUTUAL</a>
+                <a href="index.html" class="titulo text-white">AHORRO ROTATIVO MUTUAL</a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -77,7 +93,8 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Usuarios</a>
                             <div class="dropdown-menu">
-                                <a href="blog.html" class="dropdown-item">Iniciar Sesión</a>                                
+                                <a href="Iniciar_Sesion.php" class="nav-link text-dark"><i class="fa fa-user-circle" aria-hidden="true" style="font-size: 20px;"></i> <b>Iniciar Sesión</b></a>         
+                                <a href="Cerrar_Sesion.php" class="nav-link dropdown-item text-dark"><i class="fa fa-user-times" aria-hidden="true" style="font-size: 20px;"></i><b> Cerrar Sesión</b></a>                                
                             </div>
                         </div>
                     </div>
@@ -87,7 +104,7 @@
         <!-- Nav Bar End -->                
         
         <!-- Contact Start -->
-        <div class="contact" style="margin-top: 70px;">
+        <div class="contact contacto">
             <div class="container">
                 <div class="section-header">
                     <p>Contáctanos</p>
@@ -128,19 +145,19 @@
                             <div id="success"></div>
                             <form name="sentMessage" id="contactForm" novalidate="novalidate">
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="name" placeholder="Nombre" required="required" data-validation-required-message="Please enter your name" />
+                                    <input type="text" class="form-control" id="name" placeholder="Nombre" required="required" data-validation-required-message="Por Favor Escribe tu Nombre" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="email" class="form-control" id="email" placeholder="Correo" required="required" data-validation-required-message="Please enter your email" />
+                                    <input type="email" class="form-control" id="email" placeholder="Correo" required="required" data-validation-required-message="Por Favor Escribe tu Correo" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="subject" placeholder="Asunto" required="required" data-validation-required-message="Please enter a subject" />
+                                    <input type="text" class="form-control" id="subject" placeholder="Asunto" required="required" data-validation-required-message="Por Favor Escribe El Sujecto" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <textarea class="form-control" id="message" placeholder="Mensaje" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                    <textarea class="form-control" id="message" placeholder="Mensaje" required="required" data-validation-required-message="Por Favor Escribe tu Mensaje"></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div>

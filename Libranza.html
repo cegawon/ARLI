@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autorización de Descuento - Libranza</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .container {
+            max-width: 800px;
+        }
+        .firma-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .inicio{
+            margin-top: 100px;
+        }
+        .f2{
+            margin-top: -50px;
+            margin-left: 145px;
+        }
+        .f3{
+            margin-top: -50px;
+            margin-left: 150px;
+        }
+        .cuotas{
+            margin-top: -45px;
+            margin-left: 10px;
+        }
+        .justificar{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3 class="text-center">AUTORIZACIÓN DE DESCUENTO - AHORRO ROTATIVO MUTUAL POR LIBRANZA</h3>
+        <form id="libranzaForm">
+            <div class="col-6 inicio">
+                <p>Ciudad y fecha: <input type="text" id="ciudad_fecha" class="form-control" required></p>
+            </div>
+            <p>Señor: <b>PAGADOR</b></p>
+            <div>
+                <div>
+                    <p class="lh-lg justificar">En razón a que he contraído un Ahorro Rotatitivo Mutual por la modalidad de libranza con <b> ARLI </b>, por valor de:</p>  
+                </div>
+                <div class="col-6 f2">
+                    <input  type="text" id="valor_credito" class="form-control" required>
+                    
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+            <div>
+                <p class="lh-lg justificar">Autorizo a usted retener de mi salario, primas, bonificaciones, liquidaciones, indemnizaciones, seguros y cualquiera otra remuneración o prestación legal o extra legal a que se tenga derecho, las cuotas semanales, mensuales y/o semestrales correspondientes necesarias para atender la amortización de dicho Ahorro Rotatitivo Mutual por Libranza, en:</p>
+            </div>
+            <div class="d-flex">
+                <div class="mb-4 col-1 f3">
+                    <input type="text" id="cuotas" class="form-control" required>
+                </div>
+                <div class="cuotas">
+                    cuotas iguales y sucesivas, por valor de:
+                </div> 
+            </div>
+           <div class="d-flex">
+                <div class="col-6">
+                    <input type="text" id="valor_cuota" class="form-control" required>
+                </div>
+                <div class="mt-2 ms-4">
+                    cada una.
+                </div>
+           </div>
+           <div class="d-flex mt-4"> 
+                <p>La primera cuota sera descontada el día:</p>
+                <div class="ms-4">
+                    <input type="date" id="fecha_primera_cuota" class="form-control" required>
+                </div>
+           </div>
+            <div class="d-flex mt-4">
+                <div>
+                    <p>La fecha de vencimiento del crédito será el día:</p>
+                </div>
+                <div class="ms-4">
+                    <input type="date" id="fecha_vencimiento" class="form-control" required>
+                </div>
+            </div>
+            <div class="d-flex mt-4">
+                <div>
+                    <p>La tasa de interés será del:</p>
+                </div>
+                <div class="col-2 ms-1">
+                    <input type="text" id="tasa_interes" class="form-control" required>
+                </div>
+            </div>
+            <div class="d-flex mt-4">
+                <div>
+                    <p>y en caso de mora la tasa será del:</p> 
+                </div>
+                <div class="ms-1 col-2">
+                    <input type="text" id="tasa_interes" class="form-control" required>
+                </div>                
+           </div>         
+                     
+            <p class="justificar">Hemos convenido con <b>ARLI</b>, que en el evento que el descuento por nómina para el pago de la primera
+                cuota, no pueda ser realizado en la fecha prevista, éste queda autorizado para que traslade dicho cobro a
+                partir del siguiente mes. A partir de esta fecha empezará a contarse el plazo previsto para el pago de las
+                cuotas.</p><br><br>
+            <p class="justificar">Esta autorización no me releva de la responsabilidad personal y directa de pago que contraigo con
+                <b>ARLI</b>, y en consecuencia me obligo a cancelar personalmente las cuotas a que este
+                obligado, para mantener al día los pagos del crédito que me concedió <b>ARLI</b>, cuando
+                por cualquier motivo no puedan ser descontadas por nómina.</p>
+            <p class="justificar">En caso de retiro por cualquier causa, autorizo que con cargo a mi liquidación final retengan y entreguen a <b>ARLI</b> sumas hasta por el saldo pendiente de los créditos a mi cargo. De igual forma,
+                autorizo solicitar ante la Sociedad Administradora de Cesantías el giro de las sumas que tenga a mi favor
+                en el Fondo, para ser aplicados al saldo de mi obligación con <b>ARLI</b>. La presente autorización tiene
+                carácter irrevocable y no puede modificarse ni suspenderse sin autorización expresa y escrita de <b>ARLI</b>
+                dirigida a ustedes.</p>
+            <div class="firma-container">
+                <div>
+                    <b>----------------------------------------</b>
+                    <p>Firma del Empleado</p>
+                    <b>----------------------------------------</b>
+                    <p>Nombre del Empleado</p>
+                    <b>----------------------------------------</b>
+                    <p>Cedula del Empleado</p>
+                </div>
+                <div>
+                    <p>Huella</p>
+                    <div style="width: 100px; height: 100px; border: 1px solid black;"></div>
+                </div>
+            </div>
+            <h4 class="text-center mt-4">LIBRANZA</h4>
+            <div class="d-flex mt-4">
+                <p>Yo,</p>
+                <div class="col-6 ms-2">
+                    <input type="text" id="empresa" class="form-control" required>
+                </div>                     
+            </div>
+            <div class="d-flex mt-4">
+                <div>
+                    En nombre y representación de
+                </div>     
+                <div class="col-6 ms-2">
+                    <input type="text" id="empresa" class="form-control" required>
+                </div> 
+            </div>
+          
+            <div class="d-flex mt-4">
+                <div>
+                    <p>En mi calidad de</p>
+                </div>     
+                <div class="col-6 ms-2">
+                    <input type="text" id="empresa" class="form-control" required>
+                </div> 
+            </div>
+
+            <p class="mt-4">Me notificó de lo expuesto anteriormente y en la
+                calidad antes aludida, me obligo a hacer los descuentos de los salarios y demás prestaciones sociales,
+                bonificaciones, liquidaciones e indemnizaciones o cualquier otra suma a la que tuviera derecho el
+                empleado, conforme a la autorización dada, las sumas necesarias para hacer abonos al Ahorro Rotatitivo Mutual que le
+                otorgó <b>ARLI</b>.</p><br><br>
+            <p>Me obligo a hacer los descuentos salariales según la autorización dada.</p>
+            <div class="firma-container">
+                <div>
+                    <b>----------------------------------------</b>
+                    <p>Firma del Empleador</p>
+                    <b>----------------------------------------</b>
+                    <p>Nombre del Empleador</p>
+                    <b>----------------------------------------</b>
+                    <p>Cedula del Empleador</p>
+                    <b>----------------------------------------</b>
+                    <p>Cargo del Empleador</p>
+                </div>
+                <div>
+                    <p>Sello</p>
+                    <div style="width: 100px; height: 100px; border: 1px solid black;"></div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary mt-3 d-none onclick="generarPDF()">Generar PDF</button>
+        </form>
+    </div>
+
+    <script>
+        function generarPDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            doc.setFontSize(12);
+            doc.text("AUTORIZACIÓN DE DESCUENTO - LIBRANZA", 10, 10);
+            doc.text("Ciudad y fecha: " + document.getElementById("ciudad_fecha").value, 10, 20);
+            doc.text("Valor del crédito: " + document.getElementById("valor_credito").value, 10, 30);
+            doc.text("Número de cuotas: " + document.getElementById("cuotas").value, 10, 40);
+            doc.text("Valor de cada cuota: " + document.getElementById("valor_cuota").value, 10, 50);
+            doc.text("Fecha de primera cuota: " + document.getElementById("fecha_primera_cuota").value, 10, 60);
+            doc.text("Fecha de vencimiento: " + document.getElementById("fecha_vencimiento").value, 10, 70);
+            doc.text("Tasa de interés: " + document.getElementById("tasa_interes").value + "%", 10, 80);
+            doc.text("Firma del Empleado: " + document.getElementById("firma_empleado").value, 10, 100);
+            doc.text("C.C.: " + document.getElementById("cedula").value, 10, 110);
+            doc.text("Firma del Empleador: " + document.getElementById("firma_empleador").value, 10, 130);
+            doc.text("Nombre del Empleador: " + document.getElementById("nombre_empleador").value, 10, 140);
+            doc.text("Cargo: " + document.getElementById("cargo").value, 10, 150);
+            doc.save("autorizacion_libranza.pdf");
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
